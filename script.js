@@ -63,4 +63,79 @@ function greaterInThree(num1, num2, num3) {
 }
 
 
+// 5. Check if a triangle is equilateral, scalene, or isosceles
 
+function typeOfTriangleType(side1, side2, side3) {
+    if ((side1 === side2 ) && (side1 === side3)) {
+        console.log('Equilateral trangle')
+    } else if ((side1 === side2) || (side2 === side3)) {
+        console.log('Isosceles trangle')
+    } else {
+        console.log('Scalene trangle')
+
+    }
+}
+
+typeOfTriangleType(120, 120, 120);
+
+// 6. Find the a number is present in given range
+
+function findInRange(num, start, end) {
+    if ((num >= start) && (num <= end)) {
+        console.log(`${num} is between the range of ${start} and ${end}`)
+    } else {
+        console.log(`${num} is outside of range`);
+    }
+}
+
+findInRange(19, 20, 40);
+
+// 7. Perform arithmetic operations on two numbers
+//prints the result after evaluating arithmetic operations between two numbers of addition, multiplication, division, and modulus in JavaScript.
+/*
+Print result of num1+num2 if operation is “add”
+Print result of num1-num2 if operation is “subtract”
+Print result of num1*num2 if operation is “multiply”
+Print result of num1/num2 if operation is “divide”
+Print result of num1%num2 if operation is “modulus”
+Else print “Invalid operation”
+
+*/
+
+function evalNumbers (num1, num2, op) {
+    if (op == 'add') {
+        console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`)
+    } else if (op == 'substraction') {
+        console.log(`Difference of ${num1} and ${num2} is ${num1 - num2}`)
+
+    } else if (op == 'multiply') {
+        console.log(`multiplication of ${num1} and ${num2} is ${num1 * num2}`)
+
+    } else if (op == 'divide') {
+        console.log(`divide of ${num1} and ${num2} is ${num1 / num2}`)
+
+    } else if (op == 'modulus') {
+        console.log(`modulus of ${num1} and ${num2} is ${num1 % num2}`)
+
+    } else {
+        console.log('Please enter any number')
+    }
+}
+
+
+evalNumbers(21, 9, 'add');
+evalNumbers(21, 9, 'modulus');
+
+
+//8. Find check if a year is leap year or not
+
+function checkLeapYear(year) {
+    if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(`year ${year} is a leap Year`)
+    } else {
+        console.log(`year ${year} is not a leap Year`)
+
+    }
+}
+
+checkLeapYear(2020);
